@@ -24,27 +24,18 @@
 
   <script src="js/performance.js"></script>
   <script>
-    // Show username
     const username = localStorage.getItem("username");
-    if(!username){
-      window.location.href = "login.html"; // Redirect if not logged in
-    } else {
-      document.getElementById("user").innerText = username;
-    }
+    if(!username) window.location.href = "login.html";
+    else document.getElementById("user").innerText = username;
 
-    // Open subject page in a new tab
-    function openSubject(url){
-      window.open(url, "_blank");
-    }
+    function openSubject(url){ window.open(url, "_blank"); }
 
-    // Show performance for all subjects
     const subjects = ["maths","physics","english","kiswahili","biology","chemistry","geography","history"];
     const perfDiv = document.getElementById("performance");
     subjects.forEach(sub => {
       let answers = getAnswers(sub);
       let correct = Object.keys(answers).length;
-      let html = `<p>${sub.charAt(0).toUpperCase()+sub.slice(1)}: ${correct} answers saved</p>`;
-      perfDiv.innerHTML += html;
+      perfDiv.innerHTML += `<p>${sub.charAt(0).toUpperCase()+sub.slice(1)}: ${correct} answers saved</p>`;
     });
   </script>
 </body>
