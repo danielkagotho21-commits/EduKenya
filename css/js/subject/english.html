@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EduKenya - English</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>English Revision</h1>
+  <button onclick="unlockContent('2h')">Unlock 2 Hours (KES 30)</button>
+  <button onclick="unlockContent('12h')">Unlock 12 Hours (KES 50)</button>
+  <button onclick="unlockContent('24h')">Unlock 24 Hours (KES 100)</button>
+
+  <div id="content" style="display:none;">
+    <h2>Sample Questions</h2>
+    <ol>
+      <li>Define a noun → <strong>A word that names a person, place, thing, or idea.</strong></li>
+      <li>Define a verb → <strong>A word that shows action or state of being.</strong></li>
+      <li>Correct the sentence: "He go to school" → <strong>He goes to school.</strong></li>
+      <li>Identify the adjective: "The tall man is walking." → <strong>Tall</strong></li>
+      <li>Synonym of happy → <strong>Joyful / Glad</strong></li>
+      <li>Antonym of cold → <strong>Hot / Warm</strong></li>
+      <li>Write a sentence using the word "because" → <strong>I stayed home because it was raining.</strong></li>
+      <li>Correct punctuation: "where are you" → <strong>Where are you?</strong></li>
+      <li>Plural form of mouse → <strong>Mice</strong></li>
+      <li>Correct the tense: "She eat breakfast" → <strong>She eats breakfast.</strong></li>
+      <li>Define a pronoun → <strong>A word that replaces a noun.</strong></li>
+      <li>Identify the adverb: "He ran quickly." → <strong>Quickly</strong></li>
+      <li>Write past tense of run → <strong>Ran</strong></li>
+      <li>Give an example of a preposition → <strong>In, on, under, between</strong></li>
+      <li>Change to passive voice: "The cat chased the mouse." → <strong>The mouse was chased by the cat.</strong></li>
+    </ol>
+  </div>
+
+  <script src="../js/access.js"></script>
+  <script>
+    if(checkAccess()){
+        document.getElementById("content").style.display = "block";
+    }
+  </script>
+</body>
+</html>
