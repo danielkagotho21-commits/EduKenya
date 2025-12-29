@@ -6,35 +6,36 @@
 </head>
 <body>
   <h1>Chemistry Revision</h1>
-  <button onclick="unlockContent('2h')">Unlock 2 Hours (KES 30)</button>
-  <button onclick="unlockContent('12h')">Unlock 12 Hours (KES 50)</button>
-  <button onclick="unlockContent('24h')">Unlock 24 Hours (KES 100)</button>
+
+  <button onclick="payAndUnlock(30)">Unlock 2 Hours (KES 30)</button>
+  <button onclick="payAndUnlock(50)">Unlock 12 Hours (KES 50)</button>
+  <button onclick="payAndUnlock(100)">Unlock 24 Hours (KES 100)</button>
 
   <div id="content" style="display:none;">
     <h2>Sample Questions</h2>
     <ol>
-      <li>Atomic number of hydrogen → <strong>1</strong></li>
+      <li>Atomic number of H → <strong>1</strong></li>
       <li>Symbol of sodium → <strong>Na</strong></li>
-      <li>pH of neutral solution → <strong>7</strong></li>
-      <li>Define molecule → <strong>Two or more atoms chemically bonded</strong></li>
-      <li>State physical change → <strong>Ice melting</strong></li>
-      <li>State chemical change → <strong>Iron rusting</strong></li>
-      <li>Gas produced when acid reacts with metal → <strong>Hydrogen</strong></li>
-      <li>Unit of amount of substance → <strong>Mole</strong></li>
-      <li>Formula of water → <strong>H₂O</strong></li>
-      <li>Formula of carbon dioxide → <strong>CO₂</strong></li>
-      <li>Define mixture → <strong>Two or more substances not chemically combined</strong></li>
-      <li>Example of an acid → <strong>HCl</strong></li>
-      <li>Example of a base → <strong>NaOH</strong></li>
-      <li>Define solute → <strong>Substance dissolved in a solvent</strong></li>
-      <li>Define solvent → <strong>Substance in which solute dissolves</strong></li>
+      <li>pH neutral → <strong>7</strong></li>
+      <li>Molecule → <strong>Two or more atoms bonded</strong></li>
+      <li>Physical change → <strong>Ice melting</strong></li>
+      <li>Chemical change → <strong>Iron rusting</strong></li>
+      <li>Gas from acid+metal → <strong>Hydrogen</strong></li>
+      <li>Amount unit → <strong>Mole</strong></li>
+      <li>Water formula → <strong>H₂O</strong></li>
+      <li>CO₂ formula → <strong>CO₂</strong></li>
+      <li>Mixture → <strong>Substances not chemically combined</strong></li>
+      <li>Acid example → <strong>HCl</strong></li>
+      <li>Base example → <strong>NaOH</strong></li>
+      <li>Solute → <strong>Substance dissolved</strong></li>
+      <li>Solvent → <strong>Substance in which solute dissolves</strong></li>
     </ol>
   </div>
 
   <script src="../js/access.js"></script>
   <script>
     if(checkAccess()){
-        document.getElementById("content").style.display = "block";
+      document.getElementById("content").style.display = "block";
     }
   </script>
 </body>
