@@ -6,35 +6,36 @@
 </head>
 <body>
   <h1>Biology Revision</h1>
-  <button onclick="unlockContent('2h')">Unlock 2 Hours (KES 30)</button>
-  <button onclick="unlockContent('12h')">Unlock 12 Hours (KES 50)</button>
-  <button onclick="unlockContent('24h')">Unlock 24 Hours (KES 100)</button>
+
+  <button onclick="payAndUnlock(30)">Unlock 2 Hours (KES 30)</button>
+  <button onclick="payAndUnlock(50)">Unlock 12 Hours (KES 50)</button>
+  <button onclick="payAndUnlock(100)">Unlock 24 Hours (KES 100)</button>
 
   <div id="content" style="display:none;">
     <h2>Sample Questions</h2>
     <ol>
       <li>Unit of life → <strong>Cell</strong></li>
-      <li>Define photosynthesis → <strong>Process by which plants make food using sunlight.</strong></li>
-      <li>Main organ for respiration → <strong>Lungs</strong></li>
-      <li>Function of red blood cells → <strong>Transport oxygen</strong></li>
-      <li>Part of plant that absorbs water → <strong>Roots</strong></li>
-      <li>Type of reproduction producing identical offspring → <strong>Asexual</strong></li>
-      <li>Define ecosystem → <strong>Interaction of organisms with their environment</strong></li>
+      <li>Photosynthesis → <strong>Plants make food using sunlight</strong></li>
+      <li>Main organ of respiration → <strong>Lungs</strong></li>
+      <li>Red blood cells function → <strong>Carry oxygen</strong></li>
+      <li>Plant part absorbing water → <strong>Roots</strong></li>
+      <li>Asexual reproduction → <strong>Identical offspring</strong></li>
+      <li>Define ecosystem → <strong>Organisms interacting with environment</strong></li>
       <li>Unit of heredity → <strong>Gene</strong></li>
-      <li>Largest organ in human body → <strong>Skin</strong></li>
-      <li>Define habitat → <strong>Place where an organism lives</strong></li>
-      <li>Type of blood that carries oxygen → <strong>Red blood cells</strong></li>
-      <li>Define adaptation → <strong>Features that help an organism survive</strong></li>
-      <li>Example of a producer → <strong>Plant</strong></li>
-      <li>Example of a consumer → <strong>Human / Lion</strong></li>
-      <li>Define nutrition → <strong>Process of obtaining food and energy</strong></li>
+      <li>Largest organ → <strong>Skin</strong></li>
+      <li>Habitat → <strong>Place organism lives</strong></li>
+      <li>Oxygen carrier → <strong>Red blood cells</strong></li>
+      <li>Adaptation → <strong>Feature helping survival</strong></li>
+      <li>Producer example → <strong>Plant</strong></li>
+      <li>Consumer example → <strong>Human/Lion</strong></li>
+      <li>Nutrition → <strong>Obtaining food and energy</strong></li>
     </ol>
   </div>
 
   <script src="../js/access.js"></script>
   <script>
     if(checkAccess()){
-        document.getElementById("content").style.display = "block";
+      document.getElementById("content").style.display = "block";
     }
   </script>
 </body>
