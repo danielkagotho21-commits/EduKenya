@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EduKenya - Kiswahili</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>Kiswahili Revision</h1>
+  <button onclick="unlockContent('2h')">Unlock 2 Hours (KES 30)</button>
+  <button onclick="unlockContent('12h')">Unlock 12 Hours (KES 50)</button>
+  <button onclick="unlockContent('24h')">Unlock 24 Hours (KES 100)</button>
+
+  <div id="content" style="display:none;">
+    <h2>Sample Questions</h2>
+    <ol>
+      <li>Tambua nomino: "Kitabu kiko mezani" → <strong>Kitabu</strong></li>
+      <li>Tambua kitenzi: "Mimi ninakimbia" → <strong>Ninakimbia</strong></li>
+      <li>Andika sentensi kwa wakati uliopita: "Anaenda shuleni" → <strong>Alienda shuleni</strong></li>
+      <li>Neno kisa kionyesha wingi: "Kitabu" → <strong>Vitabu</strong></li>
+      <li>Tafsiri: "The teacher is kind" → <strong>Mwalimu ni mkarimu</strong></li>
+      <li>Andika kisahihi: "mimi nimesoma" → <strong>Mimi nimesoma</strong></li>
+      <li>Andika kitenzi: "Kula" katika wakati uliopita → <strong>Alikula</strong></li>
+      <li>Tambua kivumishi: "Mti mrefu" → <strong>mrefu</strong></li>
+      <li>Andika kitenzi cha hali ya sasa: "Ana..." → <strong>Anaenda</strong></li>
+      <li>Andika kitenzi cha kuhitaji: "Nataka..." → <strong>Nataka kula</strong></li>
+      <li>Tafsiri: "I am happy" → <strong>Nina furaha</strong></li>
+      <li>Andika neno sawa: "Rafiki yangu" → <strong>Marafiki wangu</strong></li>
+      <li>Sentensi fupi ya kueleza mahali → <strong>Niko shuleni</strong></li>
+      <li>Badilisha kitenzi: "Alikimbia" → <strong>Anakimbia</strong></li>
+      <li>Tambua nomino katika sentensi: "Gari limevunjika" → <strong>Gari</strong></li>
+    </ol>
+  </div>
+
+  <script src="../js/access.js"></script>
+  <script>
+    if(checkAccess()){
+        document.getElementById("content").style.display = "block";
+    }
+  </script>
+</body>
+</html>
