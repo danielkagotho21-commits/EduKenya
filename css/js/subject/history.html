@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EduKenya - History</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>History Revision</h1>
+  <button onclick="unlockContent('2h')">Unlock 2 Hours (KES 30)</button>
+  <button onclick="unlockContent('12h')">Unlock 12 Hours (KES 50)</button>
+  <button onclick="unlockContent('24h')">Unlock 24 Hours (KES 100)</button>
+
+  <div id="content" style="display:none;">
+    <h2>Sample Questions</h2>
+    <ol>
+      <li>Who was Jomo Kenyatta? → <strong>First President of Kenya</strong></li>
+      <li>Year Kenya gained independence → <strong>1963</strong></li>
+      <li>What was the Mau Mau uprising? → <strong>Anti-colonial rebellion against British rule</strong></li>
+      <li>Capital of British East Africa → <strong>Nairobi</strong></li>
+      <li>Define colonialism → <strong>Control of a country by a foreign power</strong></li>
+      <li>Who signed the Lancaster House Agreement? → <strong>Kenya and Britain</strong></li>
+      <li>First colonial governor of Kenya → <strong>Sir Harry Johnston</strong></li>
+      <li>Meaning of nationalism → <strong>Loyalty and devotion to one’s country</strong></li>
+      <li>Who were the Kapenguria Six? → <strong>Leaders of the Mau Mau imprisoned in Kapenguria</strong></li>
+      <li>Define pre-colonial Kenya → <strong>Period before European colonization</strong></li>
+      <li>Major tribes in pre-colonial Kenya → <strong>Kikuyu, Luo, Kalenjin, Luhya, Maasai</strong></li>
+      <li>Year Kenya became a republic → <strong>1964</strong></li>
+      <li>Define independence → <strong>Freedom from colonial rule</strong></li>
+      <li>Who was Dedan Kimathi? → <strong>Mau Mau leader</strong></li>
+      <li>Colonial capital of Kenya → <strong>Nairobi</strong></li>
+    </ol>
+  </div>
+
+  <script src="../js/access.js"></script>
+  <script>
+    if(checkAccess()){
+        document.getElementById("content").style.display = "block";
+    }
+  </script>
+</body>
+</html>
