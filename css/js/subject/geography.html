@@ -6,35 +6,36 @@
 </head>
 <body>
   <h1>Geography Revision</h1>
-  <button onclick="unlockContent('2h')">Unlock 2 Hours (KES 30)</button>
-  <button onclick="unlockContent('12h')">Unlock 12 Hours (KES 50)</button>
-  <button onclick="unlockContent('24h')">Unlock 24 Hours (KES 100)</button>
+
+  <button onclick="payAndUnlock(30)">Unlock 2 Hours (KES 30)</button>
+  <button onclick="payAndUnlock(50)">Unlock 12 Hours (KES 50)</button>
+  <button onclick="payAndUnlock(100)">Unlock 24 Hours (KES 100)</button>
 
   <div id="content" style="display:none;">
     <h2>Sample Questions</h2>
     <ol>
-      <li>Longest river in Kenya → <strong>Tana River</strong></li>
-      <li>Highest mountain in Kenya → <strong>Mount Kenya</strong></li>
-      <li>Capital city of Kenya → <strong>Nairobi</strong></li>
-      <li>Equator passes through which Kenyan towns? → <strong>Nanyuki, Kisumu</strong></li>
-      <li>Major lake in Kenya → <strong>Lake Victoria</strong></li>
-      <li>Define climate → <strong>Average weather conditions of a place</strong></li>
-      <li>Example of a renewable resource → <strong>Water, solar energy</strong></li>
-      <li>Define population density → <strong>Number of people per unit area</strong></li>
-      <li>Major vegetation types in Kenya → <strong>Forest, grassland, savannah</strong></li>
-      <li>Define erosion → <strong>Wearing away of the earth’s surface</strong></li>
-      <li>Example of a non-renewable resource → <strong>Coal, petroleum</strong></li>
-      <li>Define plateau → <strong>Flat elevated land</strong></li>
-      <li>Define river basin → <strong>Area drained by a river and its tributaries</strong></li>
-      <li>Major ocean bordering Kenya → <strong>Indian Ocean</strong></li>
-      <li>Meaning of longitude → <strong>Distance east or west of the Prime Meridian</strong></li>
+      <li>Longest river in Kenya → <strong>Tana</strong></li>
+      <li>Highest mountain → <strong>Mount Kenya</strong></li>
+      <li>Capital → <strong>Nairobi</strong></li>
+      <li>Equator towns → <strong>Nanyuki, Kisumu</strong></li>
+      <li>Major lake → <strong>Victoria</strong></li>
+      <li>Define climate → <strong>Average weather</strong></li>
+      <li>Renewable resource → <strong>Water</strong></li>
+      <li>Population density → <strong>People per unit area</strong></li>
+      <li>Vegetation types → <strong>Forest, grassland</strong></li>
+      <li>Erosion → <strong>Wearing away of land</strong></li>
+      <li>Non-renewable → <strong>Coal</strong></li>
+      <li>Plateau → <strong>Flat elevated land</strong></li>
+      <li>River basin → <strong>Area drained by river</strong></li>
+      <li>Ocean bordering Kenya → <strong>Indian Ocean</strong></li>
+      <li>Longitude → <strong>Distance E/W of Prime Meridian</strong></li>
     </ol>
   </div>
 
   <script src="../js/access.js"></script>
   <script>
     if(checkAccess()){
-        document.getElementById("content").style.display = "block";
+      document.getElementById("content").style.display = "block";
     }
   </script>
 </body>
