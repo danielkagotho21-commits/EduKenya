@@ -1,25 +1,22 @@
-function unlockContent(duration) {
-    let price;
-    if(duration === '2h') price = 30;
-    else if(duration === '12h') price = 50;
-    else if(duration === '24h') price = 100;
+async function payAndUnlock(amount) {
+    const phone = prompt("Enter your phone number (2547XXXXXXXX)");
+    if(!phone) return alert("Phone number required");
 
-    alert(`Simulated payment: KES ${price} — Content unlocked for ${duration}`);
-    let endTime = new Date().getTime() + durationToMs(duration);
-    localStorage.setItem('access_end', endTime);
-}
+    const response = await fetch('http://localhost:3000/pay', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone, amount })
+    });
 
-function durationToMs(duration) {
-    if(duration === '2h') return 2*60*60*1000;
-    if(duration === '12h') return 12*60*60*1000;
-    if(duration === '24h') return 24*60*60*1000;
+    const data = await response.json();
+    console.log(data);
+    alert("Payment initiated. Check your phone to complete the transaction!");
+    // Temporarily unlock content for simulation
+    localStorage.setItem('access_end', new Date().getTime() + 2*60*60*1000); // 2 hours default
+    document.getElementById("content").style.display = "block";
 }
 
 function checkAccess() {
     let endTime = localStorage.getItem('access_end');
-    if(!endTime || new Date().getTime() > endTime){
-        alert("Your access has expired!");
-        return false;
-    }
-    return true;
+    return endTime && new Date().getTime() <= endTime;
 }
