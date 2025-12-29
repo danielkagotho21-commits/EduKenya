@@ -5,19 +5,47 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Dashboard</h1>
-  <p>Select a subject to start revision:</p>
-  <ul>
-    <li><a href="subjects/maths.html">Mathematics</a></li>
-    <li><a href="subjects/physics.html">Physics</a></li>
-    <li><a href="subjects/english.html">English</a></li>
-    <li><a href="subjects/kiswahili.html">Kiswahili</a></li>
-    <li><a href="subjects/biology.html">Biology</a></li>
-    <li><a href="subjects/chemistry.html">Chemistry</a></li>
-    <li><a href="subjects/geography.html">Geography</a></li>
-    <li><a href="subjects/history.html">History</a></li>
-  </ul>
+  <h1>Welcome, <span id="user"></span>!</h1>
+  <h2>Select a subject to study</h2>
 
-  <script src="js/dashboard.js"></script>
+  <div id="subjects">
+    <button onclick="openSubject('subjects/maths.html')">Mathematics</button>
+    <button onclick="openSubject('subjects/physics.html')">Physics</button>
+    <button onclick="openSubject('subjects/english.html')">English</button>
+    <button onclick="openSubject('subjects/kiswahili.html')">Kiswahili</button>
+    <button onclick="openSubject('subjects/biology.html')">Biology</button>
+    <button onclick="openSubject('subjects/chemistry.html')">Chemistry</button>
+    <button onclick="openSubject('subjects/geography.html')">Geography</button>
+    <button onclick="openSubject('subjects/history.html')">History</button>
+  </div>
+
+  <h2>Your Performance</h2>
+  <div id="performance"></div>
+
+  <script src="js/performance.js"></script>
+  <script>
+    // Show username
+    const username = localStorage.getItem("username");
+    if(!username){
+      window.location.href = "login.html"; // Redirect if not logged in
+    } else {
+      document.getElementById("user").innerText = username;
+    }
+
+    // Open subject page in a new tab
+    function openSubject(url){
+      window.open(url, "_blank");
+    }
+
+    // Show performance for all subjects
+    const subjects = ["maths","physics","english","kiswahili","biology","chemistry","geography","history"];
+    const perfDiv = document.getElementById("performance");
+    subjects.forEach(sub => {
+      let answers = getAnswers(sub);
+      let correct = Object.keys(answers).length;
+      let html = `<p>${sub.charAt(0).toUpperCase()+sub.slice(1)}: ${correct} answers saved</p>`;
+      perfDiv.innerHTML += html;
+    });
+  </script>
 </body>
 </html>
